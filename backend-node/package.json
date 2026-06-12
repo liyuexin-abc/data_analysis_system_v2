@@ -1,0 +1,16 @@
+{
+  "name": "kp-backend",
+  "version": "1.0.0",
+  "description": "际华国际知识平台 - Node.js 主服务",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "cors": "^2.8.5",
+    "http-proxy-middleware": "^3.0.0"
+  }
+}
