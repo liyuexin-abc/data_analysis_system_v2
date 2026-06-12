@@ -1,0 +1,96 @@
+/* ============ 浅色科技风主题 ============ */
+:root {
+  --kp-primary: #2563eb;
+  --kp-primary-light: #3b82f6;
+  --kp-bg: #f4f7fc;
+  --kp-card-bg: #ffffff;
+  --kp-border: #e6ecf5;
+  --kp-text: #1e293b;
+  --kp-text-secondary: #64748b;
+  --kp-gradient: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  --el-color-primary: #2563eb;
+}
+
+body { background: var(--kp-bg); color: var(--kp-text); font-size: 14px; }
+
+/* 卡片 */
+.kp-card {
+  background: var(--kp-card-bg);
+  border: 1px solid var(--kp-border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.05);
+  transition: box-shadow .2s;
+}
+.kp-card:hover { box-shadow: 0 4px 16px rgba(37, 99, 235, 0.09); }
+
+.kp-page { padding: 18px 22px; }
+.kp-page-title {
+  font-size: 18px; font-weight: 600; margin-bottom: 4px;
+  display: flex; align-items: center; gap: 8px;
+}
+.kp-page-title::before {
+  content: ''; width: 4px; height: 18px; border-radius: 2px;
+  background: var(--kp-gradient);
+}
+.kp-page-desc { color: var(--kp-text-secondary); font-size: 13px; margin-bottom: 16px; }
+
+/* 统计卡片 */
+.stat-card {
+  background: var(--kp-card-bg); border: 1px solid var(--kp-border);
+  border-radius: 10px; padding: 16px 18px; position: relative; overflow: hidden;
+}
+.stat-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--kp-gradient); opacity: .8;
+}
+.stat-card .num { font-size: 26px; font-weight: 700; color: var(--kp-primary); font-family: 'DIN Alternate', sans-serif; }
+.stat-card .label { color: var(--kp-text-secondary); font-size: 13px; margin-top: 2px; }
+
+/* 表格细节 */
+.el-table { --el-table-header-bg-color: #f8fafd; border-radius: 8px; }
+.el-table th { font-weight: 600 !important; color: #475569 !important; }
+
+/* 标签状态色 */
+.tag-draft { --el-tag-bg-color: #f1f5f9; }
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+/* 布局 */
+.kp-layout-aside {
+  background: #fff; border-right: 1px solid var(--kp-border);
+}
+.kp-logo {
+  height: 56px; display: flex; align-items: center; padding: 0 16px; gap: 10px;
+  border-bottom: 1px solid var(--kp-border);
+}
+.kp-logo .logo-icon {
+  width: 30px; height: 30px; border-radius: 8px; background: var(--kp-gradient);
+  display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700;
+}
+.kp-logo .logo-text { font-weight: 700; font-size: 15px; letter-spacing: .5px; }
+.kp-logo .logo-sub { font-size: 10px; color: var(--kp-text-secondary); }
+
+.kp-header {
+  height: 56px; background: rgba(255,255,255,.85); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--kp-border);
+  display: flex; align-items: center; justify-content: space-between; padding: 0 22px;
+}
+
+.el-menu { border-right: none !important; }
+
+/* 问数对话气泡 */
+.chat-bubble-user {
+  background: var(--kp-gradient); color: #fff; border-radius: 12px 12px 2px 12px;
+  padding: 10px 14px; max-width: 75%; margin-left: auto;
+}
+.chat-bubble-ai {
+  background: #fff; border: 1px solid var(--kp-border); border-radius: 12px 12px 12px 2px;
+  padding: 12px 16px; max-width: 88%;
+}
+.chat-bubble-ai .md p { margin: 6px 0; }
+
+/* mono */
+.mono { font-family: 'SF Mono', Consolas, monospace; font-size: 12px; color: #475569; }

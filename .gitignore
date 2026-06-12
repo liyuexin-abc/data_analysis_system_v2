@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.log
+__pycache__/
+*.pyc
+ai-service/chroma_data/
+.env
+supervisord.pid
+supervisor.sock
